@@ -7,10 +7,10 @@ const Home = () => {
     <div>
       <Navbar />
         <h1 className='text-3xl font-bold font-BlinkMacSystemFont'>
-            Is Extended Reality a Theoretical or Geo Physicist Dream? 
+            Could Extended Reality be a rendition of a Theoretical or Geo Physicist theory? 
         </h1>
          <p>
-          Michio Kaku or Louis Lerman, both in thier own studies, have theorize the Spark of Life from a bubble. Shall we dare say a primordial mulitverse to a Metaverse.    
+          Michio Kaku and Louis Lerman, both in thier own studies, have theorized the Spark of Life in a bubble. Shall we dare compare a primordial mulitverse to a Metaverse.    
          </p>
       <Footer />
     </div>

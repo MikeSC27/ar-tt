@@ -4,7 +4,7 @@ import DuckImg from "../assets/duck.png";
 import LALogo from "../assets/lalogo.png";
 import Golfjan from "../assets/golfjan.png";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-// import Stats from "three/examples/jsm/libs/stats.module";
+
 
 const Main = () => {
   useEffect(() => {
@@ -43,12 +43,12 @@ const Main = () => {
     scene.add(backgroundMesh);
     
 
-    // add four independent cubes
+    // add four independent cubes all working together via for loop
     for (let i = 0; i < 4; i++) {
       const boxGeometry = new THREE.BoxGeometry(0.75, 0.75, 0.75);
       const material = new THREE.MeshBasicMaterial();
 
-      // assign different textures to each cube
+      // place different images to each cube
       switch (i) {
         case 0:
           material.map = new THREE.TextureLoader().load(DuckImg);
@@ -62,15 +62,7 @@ const Main = () => {
         case 3:
           material.map = new THREE.TextureLoader().load(LALogo);
           break;
-        // case 4:
-        //   material.map = new THREE.TextureLoader().load(LALogo);
-        //   break;
-        // case 5:
-        //   material.map = new THREE.TextureLoader().load(DuckImg);
-        //   break;
-        // case 6:
-        //   material.map = new THREE.TextureLoader().load(LALogo);
-        //   break;
+
       }
       
 
@@ -88,7 +80,7 @@ const Main = () => {
       animate();
     }
 
-    // added controls for camera
+    // adds controls for camera via mouse
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.update();
   }, []);

@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import Stats from 'three/examples/jsm/libs/stats.module';
-import Golfoct from '../assets/golfoct.png'
+
 
 const SingleCube = () => {
   useEffect(() => {
@@ -41,10 +41,10 @@ const SingleCube = () => {
     const boxMesh = new THREE.Mesh(boxGeometry, boxMaterial);
     scene.add(boxMesh);
 
-    // added controls for object
+    // added controls for object via mouse
     const controls = new OrbitControls(camera, renderer.domElement);
 
-    // added frames per second information
+    // added FPS information
     const stats = Stats();
     document.body.appendChild(stats.dom);
     
